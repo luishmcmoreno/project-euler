@@ -7,10 +7,12 @@ def is_palindrome(numb):
 	return numb == reverse_numb
 
 i = 0
-while (not is_palindrome(a1 * a2)):
-	if (i % 2 == 0):
-		a1 -= 1
-	else:
-		a2 -= 1
-	i += 1
-print a1, a2, a1*a2
+
+product = 0
+for i in range(100, 1000):
+	for j in range(100, 1000):
+		current_prod = i * j
+		if is_palindrome(current_prod):
+			if current_prod > product:
+				product = current_prod 
+print product

@@ -2,7 +2,7 @@ INFINITY = 999999999999999999
 
 mat = []
 
-file = open('p067_triangle.txt', 'r')
+file = open('0067_triangle.txt', 'r')
 i = 0
 for line in file.readlines():
     currentLine = line.split(' ')

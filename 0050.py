@@ -24,6 +24,7 @@ while (i <= int(n**(0.5))):
 primes = []
 prime_sum = []
 
+i = 0
 for numb in sieve:
     if (numb):
         primes.append(i)
@@ -34,7 +35,6 @@ prime_sum.append(0)
 for prime in primes:
     prime_sum.append(prime_sum[j-1] + primes[j -1])
     j += 1
-
 i = 0
 number_of_primes = 0
 for sum in prime_sum:
@@ -43,6 +43,5 @@ for sum in prime_sum:
         if (binary_search(primes, prime_sum[i] - prime_sum[j]) >= 0):
             number_of_primes = i - j
             result = prime_sum[i] - prime_sum[j]
-            print result
     i += 1
 print result
